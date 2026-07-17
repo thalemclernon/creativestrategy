@@ -1,0 +1,392 @@
+/* ===== Palette: light meadow green ===== */
+:root {
+  --sidebar-bg: #dfead2;
+  --bar-bg: #33452a;
+  --bar-text: #f4f8ef;
+  --accent: #5c7a3f;
+  --hero-box-bg: rgba(228, 238, 217, 0.72);
+  --text: #24301c;
+  --text-muted: #4a5a3d;
+  --page-bg: #ffffff;
+  --canvas-bg: #eef1e8;
+  --hl-underline: #8fae63;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem 0;
+  background: var(--canvas-bg);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.cv-page {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: var(--page-bg);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* ===== Hero (page 1): background photo + overlapping portrait + floating text box ===== */
+.hero {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Translucent white wash over the whole banner photo - the portrait and
+   headline box sit above this, so only the raw background photo gets muted. */
+.hero-wash {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.42);
+  z-index: 2;
+}
+
+.hero-photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: 45%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.hero-textbox {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  width: 56%;
+  background: var(--hero-box-bg);
+  padding: 1.75rem 2rem;
+  text-align: center;
+  z-index: 4;
+}
+
+.hero-textbox h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #1c2716;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #2c3a21;
+}
+
+/* ===== Hero (page 2): slim strip repeat of name + contact ===== */
+.hero-slim {
+  height: 140px;
+}
+
+.hero-slim-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 2rem;
+  background: var(--hero-box-bg);
+}
+
+.hero-slim-content h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1c2716;
+}
+
+.contact-inline {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: #2c3a21;
+}
+
+/* ===== Body layout ===== */
+.cv-body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.cv-body-full {
+  display: block;
+  padding: 2rem;
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  padding: 2rem 1.5rem;
+}
+
+.main-col {
+  padding: 2rem;
+}
+
+/* ===== Section bars ===== */
+.bar {
+  background: var(--bar-bg);
+  color: var(--bar-text);
+  margin: 0 0 1.25rem;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sidebar .bar {
+  margin-top: 2rem;
+}
+
+.sidebar .bar:first-child {
+  margin-top: 0;
+}
+
+.bar-full {
+  text-align: left;
+}
+
+/* ===== Contact list ===== */
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.icon {
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ===== Prose / background text ===== */
+.prose p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.skills-list li {
+  margin-bottom: 0.45rem;
+}
+
+/* ===== Client / experience blocks ===== */
+.client-block {
+  margin-bottom: 1.75rem;
+}
+
+.client-block h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.client-subtitle {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.client-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.client-block li {
+  margin-bottom: 0.5rem;
+}
+
+.hl {
+  text-decoration: underline;
+  text-decoration-color: var(--hl-underline);
+  font-weight: 700;
+}
+
+/* ===== Portfolio grid (page 2) ===== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-col h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.portfolio-col ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.portfolio-col li {
+  margin-bottom: 0.35rem;
+}
+
+/* ===== Testimonials (page 2) ===== */
+.testimonials blockquote {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--sidebar-bg);
+  border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+
+.testimonials blockquote p {
+  margin: 0 0 0.5rem;
+}
+
+.testimonials footer {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.proof-shots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.proof-shots img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #cdd9c1;
+}
+
+.more-link {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive (mobile web view) ===== */
+@media (max-width: 720px) {
+  .cv-body,
+  .portfolio-grid,
+  .proof-shots {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-bg,
+  .hero-wash {
+    display: none;
+  }
+
+  .hero-photo {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-textbox {
+    position: static;
+    transform: none;
+    width: 100%;
+    background: var(--sidebar-bg);
+    padding: 1.5rem;
+  }
+
+  .hero-slim {
+    height: auto;
+  }
+
+  .hero-slim-content {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--sidebar-bg);
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* ===== Print: make this act as an actual CV / PDF export ===== */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .cv-page {
+    max-width: none;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+  }
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
