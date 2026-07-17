@@ -365,9 +365,14 @@ a {
 
 /* ===== Print: make this act as an actual CV / PDF export ===== */
 @media print {
+  html {
+    font-size: 82%;
+  }
+
   body {
     background: #fff;
     padding: 0;
+    line-height: 1.32;
   }
 
   .cv-page {
@@ -383,6 +388,48 @@ a {
   a {
     color: var(--text);
     text-decoration: none;
+  }
+
+  .hero {
+    height: 220px;
+  }
+
+  .hero-slim {
+    height: 105px;
+  }
+
+  .sidebar,
+  .main-col {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .bar {
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .sidebar .bar {
+    margin-top: 1.1rem;
+  }
+
+  .prose p {
+    margin-bottom: 0.55rem;
+  }
+
+  .skills-list li {
+    margin-bottom: 0.25rem;
+  }
+
+  .client-block {
+    margin-bottom: 0.85rem;
+  }
+
+  .client-subtitle {
+    margin-bottom: 0.3rem;
+  }
+
+  .client-block li {
+    margin-bottom: 0.28rem;
   }
 }
 
