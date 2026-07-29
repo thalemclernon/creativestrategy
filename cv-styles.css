@@ -329,13 +329,14 @@ a {
 .testimonial-cell {
   break-inside: avoid;
   page-break-inside: avoid;
+  border: 1px solid #cdd9c1;
+  padding: 1rem;
 }
 
 .testimonial-cell img {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid #cdd9c1;
 }
 
 .testimonial-stack {
