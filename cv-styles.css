@@ -252,8 +252,6 @@ a {
 }
 
 .hl {
-  text-decoration: underline;
-  text-decoration-color: var(--hl-underline);
   font-weight: 700;
 }
 
