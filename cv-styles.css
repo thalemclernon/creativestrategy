@@ -345,10 +345,6 @@ a {
   gap: 0.7rem;
 }
 
-.testimonial-stack img {
-  border: 1px solid #cdd9c1;
-}
-
 /* ===== Responsive (mobile web view) ===== */
 @media (max-width: 720px) {
   .cv-body,
