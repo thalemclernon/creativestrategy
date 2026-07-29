@@ -406,6 +406,12 @@ a {
     text-decoration: none;
   }
 
+  .portfolio-col a,
+  .more-link a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
   .hero {
     height: 220px;
   }
