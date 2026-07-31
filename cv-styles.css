@@ -282,18 +282,18 @@ a {
 /* ===== Testimonials (page 2) ===== */
 .video-testimonials {
   display: flex;
-  gap: 0.75rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
 .video-testimonial {
   display: block;
-  flex: 0 1 130px;
-  min-width: 100px;
-  max-width: 130px;
+  flex: 1 1 140px;
+  min-width: 110px;
+  max-width: 150px;
   text-align: center;
   text-decoration: none;
 }
@@ -302,7 +302,7 @@ a {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid #b8b8b8;
+  border: 1px solid #ffffff;
   margin-bottom: 0.4rem;
 }
 
@@ -328,7 +328,7 @@ a {
 .testimonial-cell {
   break-inside: avoid;
   page-break-inside: avoid;
-  border: 1px solid #b8b8b8;
+  border: 1px solid #ffffff;
   padding: 0.5rem;
 }
 
@@ -451,7 +451,7 @@ a {
 
   .sidebar,
   .main-col {
-    padding: 1.1rem 1.25rem;
+    padding: 2rem 1.25rem 1.1rem;
   }
 
   .bar {
@@ -481,10 +481,19 @@ a {
 
   .client-subtitle {
     margin-bottom: 0.3rem;
+    font-size: 0.96rem;
   }
 
   .client-block li {
-    margin-bottom: 0.28rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .client-block h3 {
+    font-size: 1.1rem;
+  }
+
+  .client-block ul {
+    font-size: 0.96rem;
   }
 }
 
