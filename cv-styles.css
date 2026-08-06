@@ -195,9 +195,10 @@ body {
 
 .sidebar-badge {
   display: block;
-  width: 100%;
+  width: 8.1rem;
+  max-width: 100%;
   height: auto;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
 }
 
 a {
