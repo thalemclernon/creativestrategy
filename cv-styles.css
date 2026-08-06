@@ -193,6 +193,13 @@ body {
   margin-right: 0.4rem;
 }
 
+.sidebar-badge {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
 a {
   color: var(--accent);
   text-decoration: underline;
