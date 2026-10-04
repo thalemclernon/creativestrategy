@@ -86,10 +86,13 @@ For each claim or element, run these checks:
 ## Output format
 
 1. **Verdict**: one line. Ready to run / Fix before running / Do not run.
-2. **Findings table**, worst first:
+2. **Findings list**, worst first. **Never use a table.** The user dislikes them. Format each
+   finding as:
 
-| # | Line / element | Severity | Issue | Rule | Compliant rewrite |
-|---|---|---|---|---|---|
+   **1. 🔴 "quoted line"**
+   - Issue: …
+   - Rule: …
+   - Fix: "compliant rewrite"
 
 3. **Evidence needed**: claims that are fine *only if* the brand holds specific
    substantiation. Say exactly what study would be needed.
