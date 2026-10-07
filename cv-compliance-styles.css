@@ -288,6 +288,12 @@ a {
   margin-bottom: 0.35rem;
 }
 
+.more-link {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+}
+
 /* ===== Testimonials (page 2) ===== */
 .video-testimonials {
   display: flex;
