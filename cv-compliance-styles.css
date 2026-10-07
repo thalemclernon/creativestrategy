@@ -433,7 +433,7 @@ a {
   }
 
   .page-break {
-    page-break-before: always;
+    page-break-before: auto;
   }
 
   a {
