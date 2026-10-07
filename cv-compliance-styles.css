@@ -269,6 +269,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -292,6 +293,10 @@ a {
   text-align: center;
   margin: 1.5rem 0 2rem;
   font-size: 0.95rem;
+}
+
+.more-link a {
+  color: #8a8a8a;
 }
 
 /* ===== Testimonials (page 2) ===== */
@@ -443,9 +448,13 @@ a {
   }
 
   .portfolio-col a,
-  .more-link a,
   .video-testimonial-label {
     color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .more-link a {
+    color: #8a8a8a;
     text-decoration: underline;
   }
 
