@@ -176,6 +176,10 @@ body {
   text-align: left;
 }
 
+.client-block + .bar-full {
+  margin-top: 2.75rem;
+}
+
 /* ===== Contact list ===== */
 .contact-list {
   list-style: none;
@@ -197,10 +201,13 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0.5rem auto 0;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
 }
 
-a {
+a,
+a:visited {
   color: var(--accent);
   text-decoration: underline;
 }
@@ -284,6 +291,10 @@ a {
 
 .portfolio-col li {
   margin-bottom: 0.35rem;
+}
+
+.portfolio-col li.list-gap {
+  margin-top: 1.1rem;
 }
 
 /* ===== Testimonials (page 2) ===== */
@@ -406,7 +417,7 @@ a {
 /* ===== Print: make this act as an actual CV / PDF export ===== */
 @media print {
   html {
-    font-size: 82%;
+    font-size: 76%;
   }
 
   body {
@@ -421,29 +432,49 @@ a {
     margin: 0;
   }
 
-  .cv-page:not(.page-break) {
-    min-height: 11in;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cv-page:not(.page-break) .cv-body {
-    flex: 1;
-    grid-template-rows: 1fr;
+  .cv-body {
+    align-items: start;
   }
 
   .page-break {
     page-break-before: always;
   }
 
-  a {
+  .banner-repeat {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .bar-full {
+    break-before: avoid;
+    page-break-before: avoid;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .portfolio-grid {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+
+  .testimonial-cell,
+  .video-testimonials {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a,
+  a:visited {
     color: var(--text);
     text-decoration: none;
   }
 
   .portfolio-col a,
+  .portfolio-col a:visited,
   .more-link a,
-  .video-testimonial-label {
+  .more-link a:visited,
+  .video-testimonial-label,
+  .video-testimonial-label:visited {
     color: var(--accent);
     text-decoration: underline;
   }
@@ -489,6 +520,8 @@ a {
   .client-subtitle {
     margin-bottom: 0.3rem;
     font-size: 0.96rem;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .client-block li {
@@ -497,10 +530,16 @@ a {
 
   .client-block h3 {
     font-size: 1.1rem;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .client-block ul {
     font-size: 0.96rem;
+  }
+
+  .sidebar-badge {
+    padding-top: 0.5rem;
   }
 }
 
